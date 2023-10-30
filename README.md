@@ -6,16 +6,16 @@ A simple property implementation for C++
 
 ## Usage
 
-    ```cpp
+```cpp
     #include "property.hpp"
 
     class Foo {
         int _bar=0;
-    public:
-        Property<int> bar({
-            [this] () -> int { return self->_bar; },
-            [this] (int value) { self->_bar = value; }
-        });
+        public:
+            Property<int> bar({
+                [this] () -> int { return self->_bar; },
+                [this] (int value) { self->_bar = value; }
+            });
         });
     };
 
@@ -26,14 +26,14 @@ A simple property implementation for C++
         std::cout << foo.bar << std::endl; // 1
         return 0;
     }
-    ```
+```
 
 ### For readonly
 
-        ```cpp
-        class Foo {
+```cpp
+    class Foo {
             int _bar=0;
         public:
             const Property<int> bar([this] () -> int { return self->_bar; });
-        };
-        ```
+    };
+```
