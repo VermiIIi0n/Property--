@@ -13,8 +13,8 @@ A simple property implementation for C++
         int _bar=0;
         public:
             Property<int> bar({
-                [this] () -> int { return self->_bar; },
-                [this] (int value) { self->_bar = value; }
+                [this] () -> int { return this->_bar; },
+                [this] (int value) { this->_bar = value; }
             });
         });
     };
@@ -34,6 +34,6 @@ A simple property implementation for C++
     class Foo {
             int _bar=0;
         public:
-            const Property<int> bar([this] () -> int { return self->_bar; });
+            const Property<int> bar([this] () -> int { return this->_bar; });
     };
 ```
