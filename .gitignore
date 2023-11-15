@@ -2,3 +2,4 @@
 .vscode
 noupload
 **/.DS_Store
+builddir
