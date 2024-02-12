@@ -159,5 +159,5 @@ public:
 
 namespace vermils
 {
-    using namespace vms::tricks;  // backward compatibility
+    using namespace vms;  // backward compatibility
 }
